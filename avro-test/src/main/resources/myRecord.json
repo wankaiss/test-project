@@ -1,0 +1,40 @@
+{
+  "type": "record",
+  "name": "MyRecord",
+  "namespace": "com.gerald.model.avro",
+  "fields": [
+    {
+      "name": "myStrings",
+      "type": {
+        "type": "array",
+        "items": "string",
+        "java-class": "java.utils.ArrayList"
+      }
+    },
+    {
+      "name": "optionalString",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": "defaultValueTest"
+    },
+    {
+      "name": "suit",
+      "type": [
+        "null",
+        {
+          "type": "enum",
+          "name": "Suit",
+          "symbols": [
+            "SPADES",
+            "DIAMONDS",
+            "CLUBS",
+            "HEARTS"
+          ]
+        }
+      ],
+      "default": "SPADES"
+    }
+  ]
+}

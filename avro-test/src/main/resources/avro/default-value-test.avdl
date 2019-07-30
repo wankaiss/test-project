@@ -1,0 +1,19 @@
+@namespace("com.gerald.model.avro")
+
+protocol Position {
+
+  enum Suit {
+    SPADES, DIAMONDS, CLUBS, HEARTS
+  }
+
+  record MyRecord {
+    @java-class("java.utils.ArrayList") array<string> myStrings;
+    union { string, null } optionalString = "defaultValueTest";
+    union { Suit, null } suit = "SPADES";
+  }
+
+  record WholeSchema {
+    MyRecord myRecord;
+  }
+}
+

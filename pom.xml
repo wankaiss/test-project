@@ -12,6 +12,7 @@
         <module>avro-test</module>
         <module>time-test</module>
         <module>test-spring</module>
+        <module>test-lombok</module>
     </modules>
 
     <properties>

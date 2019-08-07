@@ -13,6 +13,7 @@
         <module>time-test</module>
         <module>test-spring</module>
         <module>test-lombok</module>
+        <module>regex-test</module>
     </modules>
 
     <properties>

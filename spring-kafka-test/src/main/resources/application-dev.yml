@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: TempestDiscounting
+---
+spring:
+  profiles: override
+  kafka:
+    streams:
+      application-id: override
+---
+spring:
+  profiles: confirmCsa

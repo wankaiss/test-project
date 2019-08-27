@@ -14,17 +14,20 @@
         <module>test-spring</module>
         <module>test-lombok</module>
         <module>regex-test</module>
+        <module>spring-kafka-test</module>
     </modules>
 
     <properties>
         <avro.version>1.8.2</avro.version>
         <lombok.version>1.16.16</lombok.version>
-        <maven.compiler.plugin>1.6</maven.compiler.plugin>
+        <maven.compiler.plugin>1.8</maven.compiler.plugin>
         <spotless.version>1.20.0</spotless.version>
         <kafka.version>2.3.0</kafka.version>
         <commons-io.version>2.6</commons-io.version>
         <junit.version>4.8.2</junit.version>
         <spring.version>5.1.8.RELEASE</spring.version>
+        <kafka-streams.version>2.0.1</kafka-streams.version>
+        <spring-boot.version>2.1.7.RELEASE</spring-boot.version>
     </properties>
 
     <dependencyManagement>
@@ -59,6 +62,19 @@
                 <artifactId>junit</artifactId>
                 <version>${junit.version}</version>
                 <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.kafka</groupId>
+                <artifactId>kafka-streams</artifactId>
+                <version>${kafka-streams.version}</version>
+            </dependency>
+            <dependency>
+                <!-- Import dependency management from Spring Boot -->
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>

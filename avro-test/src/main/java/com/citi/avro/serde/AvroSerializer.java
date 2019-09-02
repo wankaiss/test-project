@@ -1,21 +1,18 @@
 package com.citi.avro.serde;
 
 import com.gerald.model.avro.MyRecord;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.util.Map;
 import org.apache.avro.io.BinaryEncoder;
 import org.apache.avro.io.EncoderFactory;
 import org.apache.avro.specific.SpecificDatumWriter;
 import org.apache.kafka.common.serialization.Serializer;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.util.Map;
-
 public class AvroSerializer implements Serializer<MyRecord> {
 
   @Override
-  public void configure(Map<String, ?> configs, boolean isKey) {
-
-  }
+  public void configure(Map<String, ?> configs, boolean isKey) {}
 
   @Override
   public byte[] serialize(String s, MyRecord myRecord) {
@@ -34,7 +31,5 @@ public class AvroSerializer implements Serializer<MyRecord> {
   }
 
   @Override
-  public void close() {
-
-  }
+  public void close() {}
 }

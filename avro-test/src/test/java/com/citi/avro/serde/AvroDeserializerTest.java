@@ -1,9 +1,8 @@
 package com.citi.avro.serde;
 
 import com.gerald.model.avro.MyRecord;
-import org.junit.Test;
-
 import java.util.Arrays;
+import org.junit.Test;
 
 public class AvroDeserializerTest {
 

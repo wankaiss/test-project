@@ -1,19 +1,16 @@
 package com.citi.avro.serde;
 
 import com.gerald.model.avro.MyRecord;
+import java.io.IOException;
+import java.util.Map;
 import org.apache.avro.io.BinaryDecoder;
 import org.apache.avro.io.DecoderFactory;
 import org.apache.avro.specific.SpecificDatumReader;
 import org.apache.kafka.common.serialization.Deserializer;
 
-import java.io.IOException;
-import java.util.Map;
-
 public class AvroDeserializer implements Deserializer<MyRecord> {
   @Override
-  public void configure(Map<String, ?> configs, boolean isKey) {
-
-  }
+  public void configure(Map<String, ?> configs, boolean isKey) {}
 
   @Override
   public MyRecord deserialize(String s, byte[] bytes) {
@@ -28,7 +25,5 @@ public class AvroDeserializer implements Deserializer<MyRecord> {
   }
 
   @Override
-  public void close() {
-
-  }
+  public void close() {}
 }

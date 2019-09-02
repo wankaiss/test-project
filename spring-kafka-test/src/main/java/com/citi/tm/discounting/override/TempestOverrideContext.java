@@ -6,5 +6,4 @@ import org.springframework.context.annotation.Import;
 
 @Configuration
 @Import(KafkaStreamsExampleConfiguration.class)
-public class TempestOverrideContext {
-}
+public class TempestOverrideContext {}

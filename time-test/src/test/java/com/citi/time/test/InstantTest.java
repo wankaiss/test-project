@@ -1,16 +1,14 @@
 package com.citi.time.test;
 
-import org.junit.Test;
+import static java.util.Arrays.asList;
 
-import javax.swing.plaf.basic.BasicListUI;
 import java.time.Clock;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.stream.Collectors;
-
-import static java.util.Arrays.asList;
+import org.junit.Test;
 
 public class InstantTest {
   @Test
@@ -26,7 +24,8 @@ public class InstantTest {
     List<LocalDate> valuateDates =
         asList(LocalDate.parse("2019-08-07"), LocalDate.parse("2019-08-01"));
 
-    List<String> collect = valuateDates.stream()
+    List<String> collect =
+        valuateDates.stream()
             .map(t -> t.format(DateTimeFormatter.ISO_DATE))
             .collect(Collectors.toList());
 
@@ -38,5 +37,4 @@ public class InstantTest {
       System.out.println(s);
     }
   }
-
 }

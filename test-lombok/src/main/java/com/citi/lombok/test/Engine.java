@@ -4,5 +4,5 @@ import lombok.Data;
 
 @Data
 public class Engine {
-    private String partOne;
+  private String partOne;
 }

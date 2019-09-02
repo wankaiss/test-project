@@ -1,11 +1,10 @@
 package com.citi.tm.discounting.override.configuration;
 
+import java.util.HashMap;
+import java.util.Map;
 import lombok.Setter;
 import org.apache.kafka.streams.StreamsConfig;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-
-import java.util.HashMap;
-import java.util.Map;
 
 @Setter
 @ConfigurationProperties(prefix = "override.kafka.streams")

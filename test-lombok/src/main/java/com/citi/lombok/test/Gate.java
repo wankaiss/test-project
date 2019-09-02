@@ -1,4 +1,3 @@
 package com.citi.lombok.test;
 
-public class Gate {
-}
+public class Gate {}

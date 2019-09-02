@@ -8,8 +8,8 @@ import org.springframework.context.annotation.Import;
 @SpringBootApplication
 @EnableConfigurationProperties
 @Import(TempestDiscountingContext.class)
-public class TempestDiscountingLauncher {
+public class TempestDiscountingApplication {
   public static void main(String[] args) {
-    SpringApplication.run(TempestDiscountingLauncher.class, args);
+    SpringApplication.run(TempestDiscountingApplication.class, args);
   }
 }

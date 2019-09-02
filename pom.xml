@@ -24,7 +24,7 @@
         <spotless.version>1.20.0</spotless.version>
         <kafka.version>2.3.0</kafka.version>
         <commons-io.version>2.6</commons-io.version>
-        <junit.version>4.8.2</junit.version>
+        <junit.version>4.12</junit.version>
         <spring.version>5.1.8.RELEASE</spring.version>
         <kafka-streams.version>2.1.0</kafka-streams.version>
         <spring-boot.version>2.1.7.RELEASE</spring-boot.version>

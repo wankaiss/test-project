@@ -1,9 +1,8 @@
 package com.citi.regex.test;
 
-import org.junit.Test;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import org.junit.Test;
 
 public class RegexTest {
   @Test
@@ -23,7 +22,7 @@ public class RegexTest {
     //    String sourceSystem = "TPSDERIV:365:360,TPSDERIVNY:90:100,TPSDERIV_ALEX,TPSDERIVAU";
     //    String sourceSystemPattern = "^(?:[\\w+_:,])+$";
     String s = "^((?:[\\w+_:,])+)*$";
-//    String sourceSystemPattern = "^((?:[\\w+_:,])+)*$";
+    //    String sourceSystemPattern = "^((?:[\\w+_:,])+)*$";
 
     Pattern compile = Pattern.compile(s);
     Matcher matcher = compile.matcher(sourceSystem);

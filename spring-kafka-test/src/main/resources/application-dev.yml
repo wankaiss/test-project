@@ -4,9 +4,11 @@ spring:
 ---
 spring:
   profiles: override
+override:
   kafka:
     streams:
-      application-id: override
+      application-id: "application id"
+      bootstrap-servers: "127.0.0.1:9093"
 ---
 spring:
   profiles: confirmCsa

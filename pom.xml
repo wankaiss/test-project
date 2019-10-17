@@ -15,6 +15,7 @@
         <module>test-lombok</module>
         <module>regex-test</module>
         <module>spring-kafka-test</module>
+        <module>test-reactor</module>
     </modules>
 
     <properties>
@@ -28,6 +29,8 @@
         <spring.version>5.1.8.RELEASE</spring.version>
         <kafka-streams.version>2.1.0</kafka-streams.version>
         <spring-boot.version>2.1.7.RELEASE</spring-boot.version>
+        <reactor-core.version>3.2.12.RELEASE</reactor-core.version>
+        <reactive-streams.version>1.0.3</reactive-streams.version>
     </properties>
 
     <dependencyManagement>
@@ -75,6 +78,21 @@
                 <version>${spring-boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.projectreactor</groupId>
+                <artifactId>reactor-core</artifactId>
+                <version>${reactor-core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.reactivestreams</groupId>
+                <artifactId>reactive-streams</artifactId>
+                <version>${reactive-streams.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.projectreactor</groupId>
+                <artifactId>reactor-test</artifactId>
+                <version>${reactor-core.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

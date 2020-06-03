@@ -16,6 +16,8 @@
         <module>regex-test</module>
         <module>spring-kafka-test</module>
         <module>test-reactive</module>
+        <module>test-reactor</module>
+        <module>logback-test</module>
         <module>metrics-test</module>
     </modules>
 
@@ -32,7 +34,19 @@
         <spring-boot.version>2.1.7.RELEASE</spring-boot.version>
         <dropwizard-metrics.version>4.1.2</dropwizard-metrics.version>
         <log4j.version>1.7.25</log4j.version>
+        <reactor-core.version>3.2.12.RELEASE</reactor-core.version>
+        <reactive-streams.version>1.0.3</reactive-streams.version>
+        <slf4j.version>1.7.28</slf4j.version>
+        <logback-classis.version>1.2.3</logback-classis.version>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+    </dependencies>
 
     <dependencyManagement>
         <dependencies>
@@ -94,6 +108,31 @@
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-log4j12</artifactId>
                 <version>${log4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.projectreactor</groupId>
+                <artifactId>reactor-core</artifactId>
+                <version>${reactor-core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.reactivestreams</groupId>
+                <artifactId>reactive-streams</artifactId>
+                <version>${reactive-streams.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.projectreactor</groupId>
+                <artifactId>reactor-test</artifactId>
+                <version>${reactor-core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback-classis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

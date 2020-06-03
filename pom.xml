@@ -16,6 +16,7 @@
         <module>regex-test</module>
         <module>spring-kafka-test</module>
         <module>test-reactive</module>
+        <module>metrics-test</module>
     </modules>
 
     <properties>
@@ -29,6 +30,8 @@
         <spring.version>5.1.8.RELEASE</spring.version>
         <kafka-streams.version>2.1.0</kafka-streams.version>
         <spring-boot.version>2.1.7.RELEASE</spring-boot.version>
+        <dropwizard-metrics.version>4.1.2</dropwizard-metrics.version>
+        <log4j.version>1.7.25</log4j.version>
     </properties>
 
     <dependencyManagement>
@@ -76,6 +79,21 @@
                 <version>${spring-boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.dropwizard.metrics</groupId>
+                <artifactId>metrics-core</artifactId>
+                <version>${dropwizard-metrics.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.dropwizard.metrics</groupId>
+                <artifactId>metrics-healthchecks</artifactId>
+                <version>${dropwizard-metrics.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>${log4j.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

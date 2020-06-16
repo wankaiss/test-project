@@ -19,6 +19,7 @@
         <module>test-reactor</module>
         <module>logback-test</module>
         <module>metrics-test</module>
+        <module>jdk-http-server</module>
     </modules>
 
     <properties>
@@ -38,6 +39,8 @@
         <reactive-streams.version>1.0.3</reactive-streams.version>
         <slf4j.version>1.7.28</slf4j.version>
         <logback-classis.version>1.2.3</logback-classis.version>
+        <jersy-jdkhttpserver.version>2.31</jersy-jdkhttpserver.version>
+        <javax-servlet-api.version>3.0.1</javax-servlet-api.version>
     </properties>
 
     <dependencies>
@@ -133,6 +136,36 @@
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
                 <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.glassfish.jersey.containers</groupId>
+                <artifactId>jersey-container-jdk-http</artifactId>
+                <version>${jersy-jdkhttpserver.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.glassfish.jersey.core</groupId>
+                <artifactId>jersey-common</artifactId>
+                <version>${jersy-jdkhttpserver.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.glassfish.jersey.inject</groupId>
+                <artifactId>jersey-hk2</artifactId>
+                <version>${jersy-jdkhttpserver.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.glassfish.jersey.core</groupId>
+                <artifactId>jersey-server</artifactId>
+                <version>${jersy-jdkhttpserver.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.glassfish.jersey.ext</groupId>
+                <artifactId>jersey-spring5</artifactId>
+                <version>${jersy-jdkhttpserver.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>${javax-servlet-api.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

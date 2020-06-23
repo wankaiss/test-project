@@ -1,4 +1,3 @@
 package com.test.gauge;
 
-public class GaugeSample {
-}
+public class GaugeSample {}

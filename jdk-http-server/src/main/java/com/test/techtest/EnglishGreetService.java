@@ -3,10 +3,10 @@ package com.test.techtest;
 import org.springframework.stereotype.Component;
 
 @Component
-public class EnglishGreetService implements GreetService{
+public class EnglishGreetService implements GreetService {
 
-    @Override
-    public String sayHello(String hello) {
-        return "English Hello";
-    }
+  @Override
+  public String sayHello(String hello) {
+    return "English Hello";
+  }
 }

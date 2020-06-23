@@ -2,10 +2,9 @@ package com.test.techtest;
 
 import com.sun.net.httpserver.HttpServer;
 import com.test.techtest.config.JerseySpringContext;
+import javax.ws.rs.core.UriBuilder;
 import org.glassfish.jersey.jdkhttp.JdkHttpServerFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
-import javax.ws.rs.core.UriBuilder;
 
 public class JerseySpringApp {
   public static void main(String[] args) throws InterruptedException {

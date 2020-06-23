@@ -6,7 +6,6 @@ import com.codahale.metrics.health.HealthCheckRegistry;
 import com.test.gauge.QueueManager;
 import com.test.healthcheck.DatabaseHealthCheck;
 import com.test.histogram.RequestHandler;
-
 import java.util.Map;
 import java.util.SortedMap;
 import java.util.concurrent.TimeUnit;
@@ -20,7 +19,7 @@ public class GetStarted {
     //    healthChecks();
     //    meterMetrics();
     counterMetrics();
-//    histogramAndTimerMetrics();
+    //    histogramAndTimerMetrics();
     wait5Seconds();
   }
 
@@ -32,12 +31,11 @@ public class GetStarted {
   }
 
   private static void counterMetrics() {
-//    QueueManager jobs = new QueueManager(metrics, "jobs");
-        Counter counter = metrics.counter(MetricRegistry.name(QueueManager.class,
-     "pending-jobs"));
-//    jobs.addJob("job1");
-//    wait5Seconds();
-//    jobs.takeJob();
+    //    QueueManager jobs = new QueueManager(metrics, "jobs");
+    Counter counter = metrics.counter(MetricRegistry.name(QueueManager.class, "pending-jobs"));
+    //    jobs.addJob("job1");
+    //    wait5Seconds();
+    //    jobs.takeJob();
   }
 
   private static void meterMetrics() {

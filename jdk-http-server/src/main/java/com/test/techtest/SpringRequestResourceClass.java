@@ -1,12 +1,11 @@
 package com.test.techtest;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import javax.ws.rs.*;
-import javax.ws.rs.core.MediaType;
 import java.util.List;
 import java.util.Objects;
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 @Path("/spring-resource")
 @Service

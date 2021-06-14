@@ -16,7 +16,7 @@ public class AvroDeserializerTest {
     // when
     MyRecord output = avroDeserializer.deserialize("output", inputs);
 
-    System.out.printf("", output);
+    System.out.println(output);
   }
 
   static MyRecord createMyRecord() {

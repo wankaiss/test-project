@@ -8,21 +8,20 @@
       "type": {
         "type": "array",
         "items": "string",
-        "java-class": "java.utils.ArrayList"
+        "java-class": "java.util.ArrayList"
       }
     },
     {
       "name": "optionalString",
       "type": [
-        "null",
-        "string"
+        "string",
+        "null"
       ],
       "default": "defaultValueTest"
     },
     {
       "name": "suit",
       "type": [
-        "null",
         {
           "type": "enum",
           "name": "Suit",
@@ -32,9 +31,22 @@
             "CLUBS",
             "HEARTS"
           ]
-        }
+        },
+        "null"
       ],
       "default": "SPADES"
+    },
+    {
+      "name": "hedgeMapTest",
+      "type": [
+        "null",
+        {
+          "type": "map",
+          "values": "string",
+          "java-class": "java.util.HashMap"
+        }
+      ],
+      "default": null
     }
   ]
 }

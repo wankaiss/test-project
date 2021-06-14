@@ -7,9 +7,10 @@ protocol Position {
   }
 
   record MyRecord {
-    @java-class("java.utils.ArrayList") array<string> myStrings;
+    @java-class("java.util.ArrayList") array<string> myStrings;
     union { string, null } optionalString = "defaultValueTest";
     union { Suit, null } suit = "SPADES";
+    union { null, @java-class("java.util.HashMap") map<string> } hedgeMapTest = null;
   }
 
   record WholeSchema {
